@@ -9,8 +9,11 @@
   <body>
     <script>
       window.onload = function () {
-        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        //var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+        //var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        
+        var width = window.screen.width
+        var height = window.screen.height
 
         alert(`宽度=${width},高度=${height}`)
         console.log('宽度=', width, '高度=', height)
