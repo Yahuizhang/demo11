@@ -3,21 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <!-- 若不设置，默认980 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>适配-获取尺寸</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .wrap {
+        width: 10px;
+        height: 10px;
+        background: blue;
+      }
+      .side {
+        width: 100px;
+        background: red;
+      }
+      .content {
+        width: 200px;
+        background: olivedrab;
+      }
+      .red {
+        width: 320px;
+        height: 20px;
+        background-color: red;
+      }
+      .blue {
+        width: 160px;
+        height: 20px;
+        background-color: blue;
+      }
+      .yellow {
+        width: 1080px;
+        height: 20px;
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
+    <!-- <div class="wrap">
+      <div class="side"></div>
+      <div class="content"></div>
+    </div> -->
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="btn" onclick="getDataInfo()">测试</div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js"></script>
     <script>
-      window.onload = function () {
-        //var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-        //var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-        
-        var width = window.screen.width
-        var height = window.screen.height
-        var devicePixelRatio = window.devicePixelRatio
-
-        alert(`宽度=${width},高度=${height},设备像素比=${devicePixelRatio}`)
-        console.log('宽度=', width, '高度=', height)
+      const vConsole = new VConsole()
+      function getDataInfo() {
+        console.log(
+          '视觉视口window.screen.width=',
+          window.screen.width,
+          '布局视口window.innerWidth=',
+          window.innerWidth,
+          '布局视口documentElement.clientWidth===',
+          document.documentElement.clientWidth,
+          '设备像素比window.devicePixelRatio=',
+          window.devicePixelRatio
+        )
       }
     </script>
   </body>
