@@ -59,16 +59,18 @@
     <script>
       const vConsole = new VConsole()
       function getDataInfo() {
-        console.log(
-          '视觉视口window.screen.width=',
-          window.screen.width,
-          '布局视口window.innerWidth=',
-          window.innerWidth,
-          '布局视口documentElement.clientWidth===',
-          document.documentElement.clientWidth,
-          '设备像素比window.devicePixelRatio=',
-          window.devicePixelRatio
-        )
+        window.location.reload()
+        console.log(window)
+//         console.log(
+//           '视觉视口window.screen.width=',
+//           window.screen.width,
+//           '布局视口window.innerWidth=',
+//           window.innerWidth,
+//           '布局视口documentElement.clientWidth===',
+//           document.documentElement.clientWidth,
+//           '设备像素比window.devicePixelRatio=',
+//           window.devicePixelRatio
+//         )
       }
     </script>
   </body>
