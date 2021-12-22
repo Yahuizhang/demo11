@@ -46,6 +46,14 @@
         height:50px;
         background-color: #ddd;
       }
+      .ani{
+      width:300px;
+      transition:width 5s;
+      }
+      p{
+        height:100px;
+          background:blue;
+      }
     </style>
   </head>
   <body>
@@ -57,9 +65,16 @@
     <div class="blue"></div>
     <div class="yellow"></div>
     <div class="btn" onclick="getDataInfo()">测试</div>
+    <p id='ani'></p>
     <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js"></script>
     <script>
       const vConsole = new VConsole()
+      
+      const dom = document.getElementById('ani')
+      setTimeout(()=>{
+      dom.setAttribute('class','ani')
+      },3000)
+      
       function getDataInfo() {
         console.log(window)
 //         debugger
